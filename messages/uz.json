@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "services": "Xizmatlar",
+    "work": "Loyihalar",
+    "about": "Men haqimda",
+    "contact": "Aloqa"
+  },
+  "common": {
+    "brand": "ALIKHANOV",
+    "brandTagline": "IT-studiya",
+    "cta": "Loyihani muhokama qilish",
+    "learnMore": "Batafsil",
+    "readCase": "Loyihani ko'rish",
+    "visitSite": "Saytga o'tish"
+  },
+  "footer": {
+    "rights": "Barcha huquqlar himoyalangan.",
+    "quickLinks": "Navigatsiya",
+    "contactUs": "Bog'lanish"
+  },
+  "home": {
+    "heroKicker": "Veb-dasturlash va biznesni avtomatlashtirish",
+    "heroTitleLead": "Biznesingiz uchun ",
+    "heroTitleAccent": "SaaS, CRM, ERP va Telegram-botlar",
+    "heroTitleTail": " yarataman",
+    "heroSubtitle": "Men, Shukurullo Alixanov, O'zbekiston va MDH biznesiga jarayonlarni avtomatlashtirish va raqamli mahsulotlarni ishga tushirishda yordam beraman — g'oyadan ishga tushirishgacha.",
+    "heroCtaPrimary": "Loyihani muhokama qilish",
+    "heroCtaSecondary": "Loyihalarni ko'rish",
+    "heroScrollHint": "Pastga aylantirish",
+    "heroFact1": "4 ta xizmat yo'nalishi",
+    "heroFact2": "Bir kun ichida javob beraman",
+    "heroFact3": "Arizalar uchun o'z Telegram-botim",
+    "heroCardTitle": "Loyihani muhokama qilamizmi?",
+    "heroCardSubtitle": "Bir kun ichida javob beraman",
+    "heroCardName": "Ismingiz",
+    "heroCardContact": "Telegram yoki telefon",
+    "heroCardSubmit": "Ariza yuborish",
+    "heroCardSubmitting": "Yuborilmoqda...",
+    "heroCardSuccess": "Ariza yuborildi! Tez orada javob beraman.",
+    "heroCardError": "Yuborib bo'lmadi. Telegram orqali to'g'ridan-to'g'ri yozing.",
+    "workTitle": "Haqiqiy loyihalar",
+    "workSubtitle": "Mijozlar uchun ishlab chiqilgan va ishga tushirilgan raqamli mahsulotlar",
+    "testimonialsTitle": "Fikrlar",
+    "testimonialsSubtitle": "Mijozlar nima deydi",
+    "ctaTitle": "Biznesingiz uchun vazifa bormi?",
+    "ctaSubtitle": "Nima kerak bo'lsa yozing — bir kun ichida javob beraman va yechim taklif qilaman.",
+    "ctaButton": "Menga yozing"
+  },
+  "services": {
+    "title": "Xizmatlar",
+    "subtitle": "Biznesingiz vazifalari uchun raqamli mahsulotlarni ishlab chiqish",
+    "processTitle": "Ish qanday boradi",
+    "featuresTitle": "Nimalar kiradi",
+    "faqTitle": "Ko'p so'raladigan savollar",
+    "priceFrom": "dan",
+    "ctaTitle": "Loyihangizni muhokama qilamizmi?",
+    "ctaButton": "Ariza qoldirish"
+  },
+  "work": {
+    "problemTitle": "Vazifa",
+    "solutionTitle": "Yechim",
+    "resultTitle": "Natija",
+    "stackTitle": "Texnologiyalar"
+  },
+  "about": {
+    "title": "Men haqimda",
+    "skillsTitle": "Ishlatadigan texnologiyalar",
+    "experienceTitle": "Tajriba va ta'lim",
+    "educationTab": "Ta'lim",
+    "experienceTab": "Tajriba",
+    "downloadCv": "CV yuklab olish"
+  },
+  "contact": {
+    "title": "Men bilan bog'laning",
+    "subtitle": "Vazifangizni yozing — bir kun ichida Telegram yoki elektron pochta orqali javob beraman.",
+    "nameLabel": "Ism",
+    "emailLabel": "Email",
+    "messageLabel": "Loyiha haqida",
+    "submit": "Yuborish",
+    "submitting": "Yuborilmoqda...",
+    "success": "Xabar yuborildi! Tez orada javob beraman.",
+    "error": "Yuborib bo'lmadi. To'g'ridan-to'g'ri Telegram orqali yozing.",
+    "directTitle": "To'g'ridan-to'g'ri aloqa",
+    "poweredByBot": "Bu forma xabarlarni mijozlar uchun ishlab chiqadigan botlarim kabi, o'zimning Telegram-botim orqali yuboradi."
+  }
+}

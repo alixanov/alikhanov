@@ -1,0 +1,92 @@
+.testimonials-teaser__marquee {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 2rem;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+}
+
+.testimonials-teaser__track {
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
+  width: max-content;
+  animation: testimonials-scroll 32s linear infinite;
+}
+
+.testimonials-teaser__marquee:hover .testimonials-teaser__track {
+  animation-play-state: paused;
+}
+
+@keyframes testimonials-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.testimonial__card {
+  position: relative;
+  width: 320px;
+  flex-shrink: 0;
+  background-color: var(--container-color);
+  border: 1px solid rgb(0, 0, 0, 0.08);
+  padding: 1.75rem 2rem 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 10px -6px rgb(0 0 0 / 10%);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.testimonial__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 30px -16px rgb(0 0 0 / 18%);
+}
+
+.testimonial__card::before {
+  content: "\201C";
+  position: absolute;
+  top: 0.5rem;
+  right: 1.25rem;
+  font-size: 3.5rem;
+  font-family: Georgia, serif;
+  color: var(--accent-color);
+  opacity: 0.6;
+  line-height: 1;
+}
+
+.testimonial__img {
+  border-radius: 3rem;
+  margin-bottom: var(--mb-1);
+  box-shadow: 0 0 0 3px var(--accent-tint);
+}
+
+.testimonial__img-fallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: var(--accent-tint);
+  color: var(--accent-color-dark);
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+.testimonial__name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-0-25);
+}
+
+.testimonial__description {
+  font-size: var(--small-font-size);
+}
+
+@media screen and (max-width: 640px) {
+  .testimonial__card {
+    width: 260px;
+    padding: 1.5rem 1.5rem 1.25rem;
+  }
+}

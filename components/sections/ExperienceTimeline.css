@@ -1,0 +1,133 @@
+.timeline-block {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.timeline-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.timeline-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0;
+  background: none;
+  border: none;
+  font-weight: var(--font-semi-bold);
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  transition: color 0.2s;
+}
+
+.timeline-tab i {
+  font-size: 1.2rem;
+}
+
+.timeline-tab--active {
+  color: var(--accent-color-dark);
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  width: 2px;
+  background-color: rgb(0 0 0 / 10%);
+  transform: translateX(-50%);
+}
+
+.timeline__row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.timeline__row:last-child {
+  margin-bottom: 0;
+}
+
+.timeline__dot {
+  position: absolute;
+  left: 50%;
+  top: 0.3rem;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--accent-color-dark);
+  box-shadow: 0 0 0 4px var(--accent-tint);
+  z-index: 1;
+}
+
+.timeline__content {
+  grid-column: 1;
+  text-align: right;
+  padding-right: 1.75rem;
+}
+
+.timeline__row--right .timeline__content {
+  grid-column: 2;
+  text-align: left;
+  padding-right: 0;
+  padding-left: 1.75rem;
+}
+
+.timeline__title {
+  font-size: var(--normal-font-size);
+  color: var(--title-color);
+  margin-bottom: 0.15rem;
+}
+
+.timeline__place {
+  display: block;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  margin-bottom: 0.35rem;
+}
+
+.timeline__period {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: var(--smaller-font-size);
+  color: var(--accent-color-dark);
+}
+
+.timeline__row--left .timeline__period {
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 640px) {
+  .timeline::before {
+    left: 0.3rem;
+  }
+  .timeline__row,
+  .timeline__row--right {
+    grid-template-columns: 1fr;
+  }
+  .timeline__content,
+  .timeline__row--right .timeline__content {
+    grid-column: 1;
+    text-align: left;
+    padding-left: 1.5rem;
+    padding-right: 0;
+  }
+  .timeline__row--left .timeline__period {
+    justify-content: flex-start;
+  }
+  .timeline__dot {
+    left: 0.3rem;
+  }
+}

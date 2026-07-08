@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "home": "Главная",
+    "services": "Услуги",
+    "work": "Кейсы",
+    "about": "Обо мне",
+    "contact": "Контакты"
+  },
+  "common": {
+    "brand": "ALIKHANOV",
+    "brandTagline": "IT-студия",
+    "cta": "Обсудить проект",
+    "learnMore": "Подробнее",
+    "readCase": "Смотреть кейс",
+    "visitSite": "Открыть сайт"
+  },
+  "footer": {
+    "rights": "Все права защищены.",
+    "quickLinks": "Навигация",
+    "contactUs": "Связаться"
+  },
+  "home": {
+    "heroKicker": "Веб-разработка и автоматизация бизнеса",
+    "heroTitleLead": "Создаю ",
+    "heroTitleAccent": "SaaS, CRM, ERP и Telegram-ботов",
+    "heroTitleTail": " для вашего бизнеса",
+    "heroSubtitle": "Я, Шукурулло Алиханов, помогаю бизнесу в Узбекистане и СНГ автоматизировать процессы и запускать цифровые продукты — от идеи до запуска.",
+    "heroCtaPrimary": "Обсудить проект",
+    "heroCtaSecondary": "Смотреть кейсы",
+    "heroScrollHint": "Прокрутить вниз",
+    "heroFact1": "4 направления услуг",
+    "heroFact2": "Отвечаю в течение дня",
+    "heroFact3": "Свой Telegram-бот для заявок",
+    "heroCardTitle": "Обсудим проект?",
+    "heroCardSubtitle": "Отвечаю в течение дня",
+    "heroCardName": "Ваше имя",
+    "heroCardContact": "Telegram или телефон",
+    "heroCardSubmit": "Отправить заявку",
+    "heroCardSubmitting": "Отправка...",
+    "heroCardSuccess": "Заявка отправлена! Скоро отвечу.",
+    "heroCardError": "Не получилось. Напишите в Telegram напрямую.",
+    "workTitle": "Реальные проекты",
+    "workSubtitle": "Кейсы клиентов, которым я разработал и запустил цифровые продукты",
+    "testimonialsTitle": "Отзывы",
+    "testimonialsSubtitle": "Что говорят клиенты",
+    "ctaTitle": "Есть задача для бизнеса?",
+    "ctaSubtitle": "Расскажите, что нужно — отвечу в течение дня и предложу решение.",
+    "ctaButton": "Написать мне"
+  },
+  "services": {
+    "title": "Услуги",
+    "subtitle": "Разработка цифровых продуктов под задачи вашего бизнеса",
+    "processTitle": "Как проходит работа",
+    "featuresTitle": "Что входит",
+    "faqTitle": "Частые вопросы",
+    "priceFrom": "от",
+    "ctaTitle": "Обсудим ваш проект?",
+    "ctaButton": "Оставить заявку"
+  },
+  "work": {
+    "problemTitle": "Задача",
+    "solutionTitle": "Решение",
+    "resultTitle": "Результат",
+    "stackTitle": "Технологии"
+  },
+  "about": {
+    "title": "Обо мне",
+    "skillsTitle": "Технологии, с которыми работаю",
+    "experienceTitle": "Опыт и образование",
+    "educationTab": "Образование",
+    "experienceTab": "Опыт",
+    "downloadCv": "Скачать CV"
+  },
+  "contact": {
+    "title": "Связаться со мной",
+    "subtitle": "Опишите задачу — отвечу в Telegram или на почту в течение дня.",
+    "nameLabel": "Имя",
+    "emailLabel": "Email",
+    "messageLabel": "О проекте",
+    "submit": "Отправить",
+    "submitting": "Отправка...",
+    "success": "Сообщение отправлено! Я скоро отвечу.",
+    "error": "Не удалось отправить. Напишите напрямую в Telegram.",
+    "directTitle": "Прямые контакты",
+    "poweredByBot": "Эта форма отправляет сообщения через собственного Telegram-бота — так же, как боты, которые я разрабатываю для клиентов."
+  }
+}

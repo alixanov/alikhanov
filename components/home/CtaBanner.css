@@ -1,0 +1,19 @@
+.cta-banner {
+  padding: 4rem 0 5rem;
+  margin: 2rem 0;
+  background: linear-gradient(180deg, var(--accent-tint) 0%, transparent 100%);
+}
+
+.cta-banner__container {
+  text-align: center;
+  max-width: 640px;
+}
+
+.cta-banner__title {
+  font-size: var(--h1-font-size);
+  margin-bottom: var(--mb-0-75);
+}
+
+.cta-banner__subtitle {
+  margin-bottom: var(--mb-2);
+}

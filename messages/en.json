@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "common": {
+    "brand": "ALIKHANOV",
+    "brandTagline": "IT Studio",
+    "cta": "Discuss a project",
+    "learnMore": "Learn more",
+    "readCase": "View case study",
+    "visitSite": "Visit site"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "quickLinks": "Quick links",
+    "contactUs": "Get in touch"
+  },
+  "home": {
+    "heroKicker": "Web development & business automation",
+    "heroTitleLead": "I build ",
+    "heroTitleAccent": "SaaS, CRM, ERP and Telegram bots",
+    "heroTitleTail": " for your business",
+    "heroSubtitle": "I'm Shukurullo Alikhanov — I help businesses in Uzbekistan and the CIS automate processes and ship digital products, from idea to launch.",
+    "heroCtaPrimary": "Discuss a project",
+    "heroCtaSecondary": "View case studies",
+    "heroScrollHint": "Scroll down",
+    "heroFact1": "4 service lines",
+    "heroFact2": "I reply within a day",
+    "heroFact3": "Own Telegram bot for leads",
+    "heroCardTitle": "Let's discuss your project?",
+    "heroCardSubtitle": "I reply within a day",
+    "heroCardName": "Your name",
+    "heroCardContact": "Telegram or phone",
+    "heroCardSubmit": "Send request",
+    "heroCardSubmitting": "Sending...",
+    "heroCardSuccess": "Request sent! I'll reply soon.",
+    "heroCardError": "Couldn't send it. Please message me on Telegram directly.",
+    "workTitle": "Real projects",
+    "workSubtitle": "Client case studies I designed and shipped",
+    "testimonialsTitle": "Testimonials",
+    "testimonialsSubtitle": "What clients say",
+    "ctaTitle": "Have a business problem to solve?",
+    "ctaSubtitle": "Tell me what you need — I'll reply within a day with a plan.",
+    "ctaButton": "Message me"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Digital products built around your business needs",
+    "processTitle": "How we work",
+    "featuresTitle": "What's included",
+    "faqTitle": "Frequently asked questions",
+    "priceFrom": "from",
+    "ctaTitle": "Let's discuss your project",
+    "ctaButton": "Get in touch"
+  },
+  "work": {
+    "problemTitle": "Problem",
+    "solutionTitle": "Solution",
+    "resultTitle": "Result",
+    "stackTitle": "Tech stack"
+  },
+  "about": {
+    "title": "About me",
+    "skillsTitle": "Technologies I use",
+    "experienceTitle": "Experience & education",
+    "educationTab": "Education",
+    "experienceTab": "Experience",
+    "downloadCv": "Download CV"
+  },
+  "contact": {
+    "title": "Get in touch",
+    "subtitle": "Describe your project — I'll reply on Telegram or email within a day.",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "messageLabel": "About the project",
+    "submit": "Send",
+    "submitting": "Sending...",
+    "success": "Message sent! I'll get back to you soon.",
+    "error": "Couldn't send the message. Please message me directly on Telegram.",
+    "directTitle": "Direct contact",
+    "poweredByBot": "This form delivers messages through my own Telegram bot integration — the same kind of bot I build for clients."
+  }
+}
