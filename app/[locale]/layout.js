@@ -20,6 +20,16 @@ export const metadata = {
     default: "ALIKHANOV — SaaS, CRM, ERP и Telegram-боты на заказ",
     template: "%s | ALIKHANOV",
   },
+  description:
+    "Разработка SaaS, CRM, ERP и Telegram-ботов под ключ — от идеи до запуска в продакшн.",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    siteName: "ALIKHANOV",
+    type: "website",
+  },
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },

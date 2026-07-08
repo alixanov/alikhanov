@@ -12,7 +12,7 @@ export default async function Hero() {
       <div className="hero__bg-blob hero__bg-blob--1"></div>
       <div className="hero__bg-blob hero__bg-blob--2"></div>
 
-      <div className="hero__container container--wide">
+      <div className="hero__container container">
         <div className="hero__social">
           <a href={site.social.instagram} target="_blank" rel="noopener noreferrer" className="hero__social-icon">
             <i className="uil uil-instagram"></i>
