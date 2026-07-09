@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { site } from "@/content/site";
+import ScrollLink from "@/components/ui/ScrollLink";
 import "./Footer.css";
 
 export default async function Footer() {
@@ -12,24 +13,24 @@ export default async function Footer() {
         <h1 className="footer__title">ALIKHANOV</h1>
         <ul className="footer__list">
           <li>
-            <a href="#services" className="footer__link">
+            <ScrollLink href="#services" className="footer__link">
               {tNav("services")}
-            </a>
+            </ScrollLink>
           </li>
           <li>
-            <a href="#work" className="footer__link">
+            <ScrollLink href="#work" className="footer__link">
               {tNav("work")}
-            </a>
+            </ScrollLink>
           </li>
           <li>
-            <a href="#about" className="footer__link">
+            <ScrollLink href="#about" className="footer__link">
               {tNav("about")}
-            </a>
+            </ScrollLink>
           </li>
           <li>
-            <a href="#contact" className="footer__link">
+            <ScrollLink href="#contact" className="footer__link">
               {tNav("contact")}
-            </a>
+            </ScrollLink>
           </li>
         </ul>
 

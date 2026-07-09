@@ -2,6 +2,7 @@ import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { site } from "@/content/site";
 import HeroLeadForm from "./HeroLeadForm";
+import ScrollLink from "@/components/ui/ScrollLink";
 import "./Hero.css";
 
 export default async function Hero() {
@@ -40,14 +41,14 @@ export default async function Hero() {
           <p className="hero__description">{t("heroSubtitle")}</p>
 
           <div className="hero__buttons">
-            <a href="#contact" className="hero__btn hero__btn--primary">
+            <ScrollLink href="#contact" className="hero__btn hero__btn--primary">
               {t("heroCtaPrimary")}
               <i className="uil uil-message"></i>
-            </a>
-            <a href="#work" className="hero__btn hero__btn--outline">
+            </ScrollLink>
+            <ScrollLink href="#work" className="hero__btn hero__btn--outline">
               {t("heroCtaSecondary")}
               <i className="uil uil-arrow-right"></i>
-            </a>
+            </ScrollLink>
           </div>
 
           <ul className="hero__facts">
@@ -80,11 +81,11 @@ export default async function Hero() {
           <HeroLeadForm />
         </div>
 
-        <a href="#services" className="hero__scroll">
+        <ScrollLink href="#services" className="hero__scroll">
           <i className="bx bx-mouse hero__scroll-icon"></i>
           {t("heroScrollHint")}
           <i className="uil uil-arrow-down"></i>
-        </a>
+        </ScrollLink>
       </div>
     </section>
   );
