@@ -40,8 +40,8 @@
 }
 
 .testimonial__card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 30px -16px rgb(0 0 0 / 18%);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 18px -10px rgb(0 0 0 / 12%);
 }
 
 .testimonial__card::before {
