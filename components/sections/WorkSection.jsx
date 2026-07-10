@@ -39,8 +39,7 @@ export default function WorkSection() {
         effect="coverflow"
         grabCursor
         centeredSlides
-        initialSlide={1}
-        rewind
+        loop
         pagination={{ clickable: true }}
         mousewheel={{ forceToAxis: true, sensitivity: 1, releaseOnEdges: true }}
         coverflowEffect={{ rotate: 0, stretch: 0, depth: 100, modifier: 3, slideShadows: true }}
