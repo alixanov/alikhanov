@@ -5,10 +5,14 @@ import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
-import { EffectCoverflow, Pagination, Mousewheel } from "swiper/modules";
+import { EffectCoverflow, Mousewheel } from "swiper/modules";
 import { caseStudies } from "@/content/case-studies";
+
+// Swiper's loop mode needs enough real slides to stay reliable with
+// centeredSlides + slidesPerView:2 (Swiper's own recommendation when the
+// dataset is smaller than that minimum is to duplicate it for rendering).
+const loopSlides = [...caseStudies, ...caseStudies];
 import Modal from "@/components/ui/Modal";
 import "./WorkSection.css";
 
@@ -35,21 +39,20 @@ export default function WorkSection() {
 
       <Swiper
         className="work__slider"
-        modules={[EffectCoverflow, Pagination, Mousewheel]}
+        modules={[EffectCoverflow, Mousewheel]}
         effect="coverflow"
         grabCursor
         centeredSlides
         loop
-        pagination={{ clickable: true }}
-        mousewheel={{ forceToAxis: true, sensitivity: 1, releaseOnEdges: true }}
+        mousewheel={{ forceToAxis: true, sensitivity: 1 }}
         coverflowEffect={{ rotate: 0, stretch: 0, depth: 100, modifier: 3, slideShadows: true }}
         breakpoints={{
           0: { slidesPerView: 1 },
           700: { slidesPerView: 2 },
         }}
       >
-        {caseStudies.map((item) => (
-          <SwiperSlide className="work__card" key={item.slug}>
+        {loopSlides.map((item, index) => (
+          <SwiperSlide className="work__card" key={`${item.slug}-${index}`}>
             <div className="work__cover">
               {item.cover ? (
                 <Image
