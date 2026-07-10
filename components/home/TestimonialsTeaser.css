@@ -1,7 +1,8 @@
 .testimonials-teaser__marquee {
   width: 100%;
   overflow: hidden;
-  margin-top: 2rem;
+  margin-top: 1.25rem;
+  padding: 0.75rem 0 1.5rem;
   -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
   mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
 }
