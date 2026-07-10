@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { services } from "@/content/services";
 import Modal from "@/components/ui/Modal";
-import ScrollLink from "@/components/ui/ScrollLink";
+import { Link } from "@/i18n/navigation";
 import "./ServicesSection.css";
 
 export default function ServicesSection() {
@@ -94,10 +94,10 @@ export default function ServicesSection() {
                   {t("priceFrom")} {activeService.priceFrom}
                 </span>
               )}
-              <ScrollLink href="#contact" className="button button--flex" onClick={() => setOpenSlug(null)}>
+              <Link href="/contact" className="button button--flex" onClick={() => setOpenSlug(null)}>
                 {t("ctaButton")}
                 <i className="uil uil-message button__icon"></i>
-              </ScrollLink>
+              </Link>
             </div>
           </>
         )}

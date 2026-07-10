@@ -1,14 +1,17 @@
 import { routing } from "@/i18n/routing";
 
 const BASE_URL = "https://www.alikhanov.uz";
+const PATHS = ["", "/services", "/work", "/about", "/contact"];
 
 export default function sitemap() {
-  return routing.locales.map((locale) => ({
-    url: `${BASE_URL}/${locale}`,
-    alternates: {
-      languages: Object.fromEntries(
-        routing.locales.map((l) => [l, `${BASE_URL}/${l}`])
-      ),
-    },
-  }));
+  return PATHS.flatMap((path) =>
+    routing.locales.map((locale) => ({
+      url: `${BASE_URL}/${locale}${path}`,
+      alternates: {
+        languages: Object.fromEntries(
+          routing.locales.map((l) => [l, `${BASE_URL}/${l}${path}`])
+        ),
+      },
+    }))
+  );
 }
