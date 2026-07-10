@@ -57,17 +57,21 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const scrollToSection = () => {
+  const scrollToSection = (id) => (event) => {
+    event.preventDefault();
     setShowMenu(false);
-    setTimeout(() => {
-      window.history.replaceState(null, "", window.location.pathname);
-    }, 600);
+    if (id === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    window.history.replaceState(null, "", window.location.pathname);
   };
 
   return (
     <header className="header">
       <nav className="nav container">
-        <a href="#home" onClick={scrollToSection} className="nav__logo">
+        <a href="#home" onClick={scrollToSection("home")} className="nav__logo">
           ALIKHANOV
         </a>
 
@@ -77,7 +81,7 @@ export default function Header() {
               <li className="nav__item" key={item.id}>
                 <a
                   href={`#${item.id}`}
-                  onClick={scrollToSection}
+                  onClick={scrollToSection(item.id)}
                   className={
                     activeSection === item.id ? "nav__link active-link" : "nav__link"
                   }
