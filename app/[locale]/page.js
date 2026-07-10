@@ -1,7 +1,11 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Hero from "@/components/home/Hero";
+import ServicesSection from "@/components/sections/ServicesSection";
+import WorkSection from "@/components/sections/WorkSection";
 import TestimonialsTeaser from "@/components/home/TestimonialsTeaser";
+import AboutSection from "@/components/sections/AboutSection";
 import CtaBanner from "@/components/home/CtaBanner";
+import ContactSection from "@/components/sections/ContactSection";
 import JsonLd from "@/components/seo/JsonLd";
 import { site } from "@/content/site";
 
@@ -73,8 +77,12 @@ export default async function HomePage({ params }) {
     <>
       <JsonLd data={jsonLd} />
       <Hero />
+      <ServicesSection />
+      <WorkSection />
       <TestimonialsTeaser />
+      <AboutSection />
       <CtaBanner />
+      <ContactSection />
     </>
   );
 }
