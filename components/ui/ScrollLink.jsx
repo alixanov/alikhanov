@@ -1,11 +1,11 @@
 "use client";
 
+import { scrollToSection } from "./scrollToSection";
+
 export default function ScrollLink({ href, children, onClick, ...props }) {
   const handleClick = (event) => {
     event.preventDefault();
-    const id = href.replace("#", "");
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-    window.history.replaceState(null, "", window.location.pathname);
+    scrollToSection(href.replace("#", ""));
     onClick?.(event);
   };
 

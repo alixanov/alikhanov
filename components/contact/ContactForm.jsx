@@ -7,7 +7,7 @@ export default function ContactForm() {
   const t = useTranslations("contact");
   const locale = useLocale();
   const [status, setStatus] = useState("idle");
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", message: "", company: "" });
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -28,7 +28,7 @@ export default function ContactForm() {
       if (!response.ok) throw new Error("request_failed");
 
       setStatus("success");
-      setForm({ name: "", email: "", message: "" });
+      setForm({ name: "", email: "", message: "", company: "" });
     } catch {
       setStatus("error");
     }
@@ -36,6 +36,16 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="contact__form">
+      <input
+        type="text"
+        name="company"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hp-field"
+        value={form.company}
+        onChange={handleChange}
+      />
       <div className="contact__form-div">
         <label className="contact__form-tag" htmlFor="name">
           {t("nameLabel")}

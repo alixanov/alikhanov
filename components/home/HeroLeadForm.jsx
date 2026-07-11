@@ -7,7 +7,7 @@ export default function HeroLeadForm() {
   const t = useTranslations("home");
   const locale = useLocale();
   const [status, setStatus] = useState("idle");
-  const [form, setForm] = useState({ name: "", contact: "" });
+  const [form, setForm] = useState({ name: "", contact: "", company: "" });
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -25,15 +25,16 @@ export default function HeroLeadForm() {
         body: JSON.stringify({
           name: form.name,
           email: form.contact,
-          message: "Быстрая заявка с главного экрана (hero-форма)",
+          message: t("heroCardAutoMessage"),
           locale,
+          company: form.company,
         }),
       });
 
       if (!response.ok) throw new Error("request_failed");
 
       setStatus("success");
-      setForm({ name: "", contact: "" });
+      setForm({ name: "", contact: "", company: "" });
     } catch {
       setStatus("error");
     }
@@ -41,6 +42,16 @@ export default function HeroLeadForm() {
 
   return (
     <form className="hero-card__form" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        name="company"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hp-field"
+        value={form.company}
+        onChange={handleChange}
+      />
       <input
         type="text"
         name="name"

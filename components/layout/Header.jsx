@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import LocaleSwitcher from "./LocaleSwitcher";
+import { scrollToSection } from "@/components/ui/scrollToSection";
 import "./Header.css";
 
 const NAV_ITEMS = [
@@ -57,21 +58,16 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const scrollToSection = (id) => (event) => {
+  const handleNavClick = (id) => (event) => {
     event.preventDefault();
     setShowMenu(false);
-    if (id === "home") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-    window.history.replaceState(null, "", window.location.pathname);
+    scrollToSection(id);
   };
 
   return (
     <header className="header">
       <nav className="nav container">
-        <a href="#home" onClick={scrollToSection("home")} className="nav__logo">
+        <a href="#home" onClick={handleNavClick("home")} className="nav__logo">
           ALIKHANOV
         </a>
 
@@ -81,7 +77,7 @@ export default function Header() {
               <li className="nav__item" key={item.id}>
                 <a
                   href={`#${item.id}`}
-                  onClick={scrollToSection(item.id)}
+                  onClick={handleNavClick(item.id)}
                   className={
                     activeSection === item.id ? "nav__link active-link" : "nav__link"
                   }

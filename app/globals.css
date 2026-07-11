@@ -188,6 +188,15 @@ img {
   line-height: 1;
 }
 
+/*=============== HONEYPOT (spam-trap field, hidden from real users) ===============*/
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /*=============== BUTTONS ===============*/
 .button {
   display: inline-block;

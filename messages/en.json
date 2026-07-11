@@ -12,7 +12,10 @@
     "cta": "Discuss a project",
     "learnMore": "Learn more",
     "readCase": "View case study",
-    "visitSite": "Visit site"
+    "visitSite": "Visit site",
+    "errorTitle": "Something went wrong",
+    "errorMessage": "An unexpected error occurred. Please try again.",
+    "errorRetry": "Try again"
   },
   "footer": {
     "rights": "All rights reserved.",
@@ -39,6 +42,7 @@
     "heroCardSubmitting": "Sending...",
     "heroCardSuccess": "Request sent! I'll reply soon.",
     "heroCardError": "Couldn't send it. Please message me on Telegram directly.",
+    "heroCardAutoMessage": "Quick request from the homepage (hero form)",
     "workTitle": "Real projects",
     "workSubtitle": "Client case studies I designed and shipped",
     "testimonialsTitle": "Testimonials",

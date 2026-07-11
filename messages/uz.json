@@ -12,7 +12,10 @@
     "cta": "Loyihani muhokama qilish",
     "learnMore": "Batafsil",
     "readCase": "Loyihani ko'rish",
-    "visitSite": "Saytga o'tish"
+    "visitSite": "Saytga o'tish",
+    "errorTitle": "Nimadir noto'g'ri ketdi",
+    "errorMessage": "Kutilmagan xatolik yuz berdi. Qayta urinib ko'ring.",
+    "errorRetry": "Qayta urinish"
   },
   "footer": {
     "rights": "Barcha huquqlar himoyalangan.",
@@ -39,6 +42,7 @@
     "heroCardSubmitting": "Yuborilmoqda...",
     "heroCardSuccess": "Ariza yuborildi! Tez orada javob beraman.",
     "heroCardError": "Yuborib bo'lmadi. Telegram orqali to'g'ridan-to'g'ri yozing.",
+    "heroCardAutoMessage": "Bosh sahifadan tezkor ariza (hero-forma)",
     "workTitle": "Haqiqiy loyihalar",
     "workSubtitle": "Mijozlar uchun ishlab chiqilgan va ishga tushirilgan raqamli mahsulotlar",
     "testimonialsTitle": "Fikrlar",

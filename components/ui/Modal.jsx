@@ -13,6 +13,15 @@ export default function Modal({ open, onClose, children }) {
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [open, onClose]);
 
+  useEffect(() => {
+    if (!open) return;
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [open]);
+
   return (
     <div className={open ? "modal active-modal" : "modal"}>
       <div className="modal__content">

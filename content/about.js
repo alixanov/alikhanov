@@ -4,7 +4,7 @@ export const about = {
       "Я — full-stack разработчик, который проектирует и запускает SaaS, CRM, ERP-системы и Telegram-ботов для бизнеса. Веду проект от первого брифа до продакшена и дальнейшей поддержки — сам пишу фронтенд, бэкенд и настраиваю интеграции.",
     stats: [
       { icon: "bx-layer", value: "4", label: "направления услуг" },
-      { icon: "bx-briefcase-alt", value: "7+", label: "завершённых проектов" },
+      { icon: "bx-briefcase-alt", value: "30+", label: "завершённых проектов" },
       { icon: "bx-support", value: "24/7", label: "на связи" },
     ],
     skills: {
@@ -45,7 +45,7 @@ export const about = {
       "Men — biznes uchun SaaS, CRM, ERP tizimlari va Telegram-botlarni loyihalaydigan va ishga tushiradigan full-stack dasturchiman. Loyihani birinchi brifdan production va keyingi qo'llab-quvvatlashgacha olib boraman — frontend, backend va integratsiyalarni o'zim yozaman.",
     stats: [
       { icon: "bx-layer", value: "4", label: "xizmat yo'nalishi" },
-      { icon: "bx-briefcase-alt", value: "7+", label: "yakunlangan loyiha" },
+      { icon: "bx-briefcase-alt", value: "30+", label: "yakunlangan loyiha" },
       { icon: "bx-support", value: "24/7", label: "aloqada" },
     ],
     skills: {
@@ -86,7 +86,7 @@ export const about = {
       "I'm a full-stack developer who designs and ships SaaS, CRM, ERP systems and Telegram bots for businesses. I own the project from the first brief through production and ongoing support — writing frontend, backend, and integrations myself.",
     stats: [
       { icon: "bx-layer", value: "4", label: "service lines" },
-      { icon: "bx-briefcase-alt", value: "7+", label: "completed projects" },
+      { icon: "bx-briefcase-alt", value: "30+", label: "completed projects" },
       { icon: "bx-support", value: "24/7", label: "available" },
     ],
     skills: {
