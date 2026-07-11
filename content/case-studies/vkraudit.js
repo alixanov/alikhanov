@@ -1,11 +1,11 @@
 export const vkraudit = {
   slug: "vkraudit",
-  url: null,
+  url: "https://www.myeducheck.uz/",
   year: 2026,
   tags: ["web", "education", "ai"],
   cover: "/images/case-studies/vkraudit-v3.png",
   ru: {
-    title: "VKR Audit — проверка дипломных работ",
+    title: "MyEduCheck — проверка дипломных работ",
     summary: "Бесплатный сервис проверки выпускных квалификационных работ с рекомендациями от ИИ.",
     problem:
       "Студенты перед защитой ВКР часто остаются один на один с работой: научный руководитель не всегда успевает вычитать текст детально, а платная проверка доступна не всем.",
@@ -19,7 +19,7 @@ export const vkraudit = {
     stack: ["React", "Node.js", "AI API"],
   },
   uz: {
-    title: "VKR Audit — bitiruv malakaviy ishini tekshirish",
+    title: "MyEduCheck — bitiruv malakaviy ishini tekshirish",
     summary: "Bitiruv malakaviy ishlarini bepul tekshirish va sun'iy intellekt tavsiyalarini beruvchi servis.",
     problem:
       "Talabalar BMI himoyasidan oldin ko'pincha ish bilan yakka o'zi qoladi: ilmiy rahbar har doim matnni batafsil ko'rib chiqishga ulgurmaydi, pullik tekshiruv esa hammaga ham qulay emas.",
@@ -33,7 +33,7 @@ export const vkraudit = {
     stack: ["React", "Node.js", "AI API"],
   },
   en: {
-    title: "VKR Audit — thesis review service",
+    title: "MyEduCheck — thesis review service",
     summary: "A free service that reviews graduation theses and gives AI-generated recommendations.",
     problem:
       "Before defending their thesis, students are often left to review it alone: supervisors rarely have time for a detailed read-through, and paid review services aren't accessible to everyone.",
