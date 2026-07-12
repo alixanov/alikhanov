@@ -15,9 +15,9 @@ export default async function ContactSection() {
         {t("subtitle")}
       </span>
 
-      <div className="contact__container container grid">
-        <div className="contact__content">
-          <h3 className="contact__title">{t("directTitle")}</h3>
+      <div className="contact__panel container">
+        <div className="contact__panel-col contact__panel-col--info">
+          <h3 className="contact__title contact__title--on-tint">{t("directTitle")}</h3>
           <div className="contact__info">
             <a href={`mailto:${site.email}`} className="contact__card">
               <span className="icon-badge contact__card-icon">
@@ -75,7 +75,7 @@ export default async function ContactSection() {
           </p>
         </div>
 
-        <div className="contact__content">
+        <div className="contact__panel-col contact__panel-col--form">
           <h3 className="contact__title">{t("messageLabel")}</h3>
           <ContactForm />
         </div>
