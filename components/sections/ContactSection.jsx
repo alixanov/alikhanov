@@ -16,13 +16,11 @@ export default async function ContactSection() {
       </span>
 
       <div className="contact__panel container">
-        <div className="contact__panel-col contact__panel-col--info">
-          <h3 className="contact__title contact__title--on-tint">{t("directTitle")}</h3>
+        <div className="contact__panel-col">
+          <h3 className="contact__title">{t("directTitle")}</h3>
           <div className="contact__info">
             <a href={`mailto:${site.email}`} className="contact__card">
-              <span className="icon-badge contact__card-icon">
-                <i className="bx bx-mail-send"></i>
-              </span>
+              <i className="bx bx-mail-send contact__card-icon"></i>
               <span className="contact__card-body">
                 <span className="contact__card-title">Email</span>
                 <span className="contact__card-data">{site.email}</span>
@@ -35,9 +33,7 @@ export default async function ContactSection() {
               rel="noopener noreferrer"
               className="contact__card"
             >
-              <span className="icon-badge contact__card-icon">
-                <i className="bx bxl-telegram"></i>
-              </span>
+              <i className="bx bxl-telegram contact__card-icon"></i>
               <span className="contact__card-body">
                 <span className="contact__card-title">Telegram</span>
                 <span className="contact__card-data">@alikhanov13</span>
@@ -50,9 +46,7 @@ export default async function ContactSection() {
               rel="noopener noreferrer"
               className="contact__card"
             >
-              <span className="icon-badge contact__card-icon">
-                <i className="bx bxl-instagram"></i>
-              </span>
+              <i className="bx bxl-instagram contact__card-icon"></i>
               <span className="contact__card-body">
                 <span className="contact__card-title">Instagram</span>
                 <span className="contact__card-data">alikhanov.13</span>
@@ -60,9 +54,7 @@ export default async function ContactSection() {
               <i className="bx bx-right-arrow-alt contact__card-arrow"></i>
             </a>
             <a href={`tel:${site.phone}`} className="contact__card">
-              <span className="icon-badge contact__card-icon">
-                <i className="bx bx-phone"></i>
-              </span>
+              <i className="bx bx-phone contact__card-icon"></i>
               <span className="contact__card-body">
                 <span className="contact__card-title">Phone</span>
                 <span className="contact__card-data">{site.phone}</span>
@@ -75,7 +67,7 @@ export default async function ContactSection() {
           </p>
         </div>
 
-        <div className="contact__panel-col contact__panel-col--form">
+        <div className="contact__panel-col">
           <h3 className="contact__title">{t("messageLabel")}</h3>
           <ContactForm />
         </div>
