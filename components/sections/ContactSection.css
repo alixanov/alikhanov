@@ -3,18 +3,18 @@
   flex-direction: column;
   justify-content: center;
   min-height: calc(100vh - var(--header-height) - 1.5rem);
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .contact .section__subtitle {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .contact__panel {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  column-gap: 4rem;
+  column-gap: 5rem;
 }
 .contact__panel-col {
   display: flex;
@@ -37,13 +37,13 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--text-color);
-  margin-bottom: var(--mb-1);
+  margin-bottom: var(--mb-1-5);
 }
 .contact__card {
   display: flex;
   align-items: center;
   gap: 0.9rem;
-  padding: 0.85rem 0;
+  padding: 1.15rem 0;
   border-bottom: 1px solid rgb(0 0 0 / 8%);
   text-align: left;
   overflow: hidden;
@@ -97,7 +97,7 @@
   gap: 0.5rem;
   font-size: var(--smaller-font-size);
   color: var(--text-color);
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
   max-width: 380px;
 }
 
@@ -108,7 +108,7 @@
 }
 .contact__form-div {
   position: relative;
-  margin-bottom: var(--mb-1);
+  margin-bottom: var(--mb-1-5);
 }
 
 .contact__form-input {

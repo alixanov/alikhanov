@@ -70,7 +70,14 @@ export default async function Hero() {
         <div className="hero-card">
           <div className="hero-card__header">
             <div className="hero-card__avatar">
-              <Image src="/images/home/profile.jpg" alt="Shukurullo Alikhanov" fill sizes="56px" priority />
+              <Image
+                src="/images/home/profile.jpg"
+                alt="Shukurullo Alikhanov"
+                fill
+                sizes="112px"
+                quality={90}
+                priority
+              />
             </div>
             <div>
               <h3 className="hero-card__title">{t("heroCardTitle")}</h3>
