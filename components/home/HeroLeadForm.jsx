@@ -7,11 +7,11 @@ export default function HeroLeadForm() {
   const t = useTranslations("home");
   const locale = useLocale();
   const [status, setStatus] = useState("idle");
-  const [form, setForm] = useState({ name: "", contact: "", company: "" });
+  const [form, setForm] = useState({ name: "", contact: "", hpAgree: false });
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
+    const { name, value, type, checked } = event.target;
+    setForm((prev) => ({ ...prev, [name]: type === "checkbox" ? checked : value }));
   };
 
   const handleSubmit = async (event) => {
@@ -27,14 +27,14 @@ export default function HeroLeadForm() {
           email: form.contact,
           message: t("heroCardAutoMessage"),
           locale,
-          company: form.company,
+          hpAgree: form.hpAgree,
         }),
       });
 
       if (!response.ok) throw new Error("request_failed");
 
       setStatus("success");
-      setForm({ name: "", contact: "", company: "" });
+      setForm({ name: "", contact: "", hpAgree: false });
     } catch {
       setStatus("error");
     }
@@ -43,13 +43,13 @@ export default function HeroLeadForm() {
   return (
     <form className="hero-card__form" onSubmit={handleSubmit}>
       <input
-        type="text"
-        name="company"
+        type="checkbox"
+        name="hpAgree"
         tabIndex={-1}
         autoComplete="off"
         aria-hidden="true"
         className="hp-field"
-        value={form.company}
+        checked={form.hpAgree}
         onChange={handleChange}
       />
       <input

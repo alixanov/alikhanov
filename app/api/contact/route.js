@@ -26,9 +26,12 @@ export async function POST(request) {
     return Response.json({ ok: false, error: "missing_fields" }, { status: 400 });
   }
 
-  // Honeypot: real users never fill this hidden field. Pretend success so
-  // bots don't learn their submission was rejected.
-  if (body.company) {
+  // Honeypot: real users never check this hidden checkbox. Pretend success
+  // so bots don't learn their submission was rejected. A checkbox (rather
+  // than a text field named "company"/"website") avoids browsers silently
+  // autofilling it from a saved address/organization profile, which was
+  // causing real submissions to be mistaken for bots.
+  if (body.hpAgree) {
     return Response.json({ ok: true });
   }
 

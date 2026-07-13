@@ -7,11 +7,11 @@ export default function ContactForm() {
   const t = useTranslations("contact");
   const locale = useLocale();
   const [status, setStatus] = useState("idle");
-  const [form, setForm] = useState({ name: "", email: "", message: "", company: "" });
+  const [form, setForm] = useState({ name: "", email: "", message: "", hpAgree: false });
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
+    const { name, value, type, checked } = event.target;
+    setForm((prev) => ({ ...prev, [name]: type === "checkbox" ? checked : value }));
   };
 
   const handleSubmit = async (event) => {
@@ -28,7 +28,7 @@ export default function ContactForm() {
       if (!response.ok) throw new Error("request_failed");
 
       setStatus("success");
-      setForm({ name: "", email: "", message: "", company: "" });
+      setForm({ name: "", email: "", message: "", hpAgree: false });
     } catch {
       setStatus("error");
     }
@@ -37,13 +37,13 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="contact__form">
       <input
-        type="text"
-        name="company"
+        type="checkbox"
+        name="hpAgree"
         tabIndex={-1}
         autoComplete="off"
         aria-hidden="true"
         className="hp-field"
-        value={form.company}
+        checked={form.hpAgree}
         onChange={handleChange}
       />
       <div className="contact__form-div">
