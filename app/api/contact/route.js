@@ -65,10 +65,10 @@ export async function POST(request) {
   }
 
   const text = [
-    "New inquiry from alikhanov.uz",
-    `Name: ${name}`,
+    "Новая заявка с alikhanov.uz",
+    `Имя: ${name}`,
     `Email: ${email || "-"}`,
-    `Locale: ${locale || "-"}`,
+    `Язык сайта: ${locale || "-"}`,
     "",
     message,
   ].join("\n");
