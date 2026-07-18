@@ -1,9 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import LocaleSwitcher from "./LocaleSwitcher";
-import { scrollToSection } from "@/components/ui/scrollToSection";
 import "./Header.css";
 
 const NAV_ITEMS = [
@@ -14,8 +13,11 @@ const NAV_ITEMS = [
   { id: "contact", key: "contact", icon: "uil-message" },
 ];
 
+const SECTION_PATHS = { home: "", services: "/services", work: "/work", about: "/about", contact: "/contact" };
+
 export default function Header() {
   const t = useTranslations("nav");
+  const locale = useLocale();
   const [showMenu, setShowMenu] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
@@ -55,19 +57,36 @@ export default function Header() {
 
     window.addEventListener("scroll", onScroll, { passive: true });
     update();
+
+    // A direct visit or refresh on a cosmetic URL like /uz/services is
+    // rewritten by the middleware to serve this same page — scroll to the
+    // matching section once on load so it doesn't just land on top.
+    const suffix = window.location.pathname.replace(`/${locale}`, "");
+    const initialItem = NAV_ITEMS.find((item) => SECTION_PATHS[item.id] === suffix);
+    if (initialItem && initialItem.id !== "home") {
+      document.getElementById(initialItem.id)?.scrollIntoView({ behavior: "instant", block: "start" });
+    }
+
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [locale]);
 
   const handleNavClick = (id) => (event) => {
     event.preventDefault();
     setShowMenu(false);
-    scrollToSection(id);
+
+    if (id === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    window.history.pushState(null, "", `/${locale}${SECTION_PATHS[id] ?? ""}`);
   };
 
   return (
     <header className="header">
       <nav className="nav container">
-        <a href="#home" onClick={handleNavClick("home")} className="nav__logo">
+        <a href={`/${locale}`} onClick={handleNavClick("home")} className="nav__logo">
           ALIKHANOV
         </a>
 
@@ -76,7 +95,7 @@ export default function Header() {
             {NAV_ITEMS.map((item) => (
               <li className="nav__item" key={item.id}>
                 <a
-                  href={`#${item.id}`}
+                  href={`/${locale}${SECTION_PATHS[item.id]}`}
                   onClick={handleNavClick(item.id)}
                   className={
                     activeSection === item.id ? "nav__link active-link" : "nav__link"
