@@ -1,32 +1,55 @@
 .locale-switcher {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
+  position: relative;
 }
 
-.locale-switcher__item {
-  padding-right: 0.65rem;
-  border-right: 1px solid rgb(0 0 0 / 12%);
+.locale-switcher__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+  padding: 0.35rem 0.1rem;
+  letter-spacing: 0.02em;
+}
+
+.locale-switcher__chevron {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  transition: transform 0.2s;
+}
+
+.locale-switcher__chevron.is-open {
+  transform: rotate(180deg);
+}
+
+.locale-switcher__menu {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 3.75rem;
+  background-color: var(--container-color);
+  border: 1px solid rgb(0 0 0 / 8%);
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 24px -10px rgb(0 0 0 / 20%);
+  padding: 0.35rem;
+  z-index: var(--z-tooltip);
+}
+
+.locale-switcher__option {
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
   font-size: var(--smaller-font-size);
   font-weight: var(--font-medium);
-  letter-spacing: 0.02em;
-  line-height: 1;
   color: var(--text-color);
-  transition: color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
 }
 
-.locale-switcher__item:last-child {
-  padding-right: 0;
-  border-right: none;
-}
-
-.locale-switcher__item:hover {
+.locale-switcher__option:hover {
+  background-color: var(--body-color);
   color: var(--title-color);
-}
-
-.locale-switcher__item.is-active {
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
 }
 
 @media screen and (max-width: 768px) {
