@@ -20,12 +20,13 @@ export default async function ContactSection() {
           <h3 className="contact__title">{t("directTitle")}</h3>
           <div className="contact__info">
             <a href={`mailto:${site.email}`} className="contact__card">
-              <i className="bx bx-mail-send contact__card-icon"></i>
+              <span className="contact__card-icon">
+                <i className="bx bx-mail-send"></i>
+              </span>
               <span className="contact__card-body">
                 <span className="contact__card-title">Email</span>
                 <span className="contact__card-data">{site.email}</span>
               </span>
-              <i className="bx bx-right-arrow-alt contact__card-arrow"></i>
             </a>
             <a
               href={site.social.telegram}
@@ -33,12 +34,13 @@ export default async function ContactSection() {
               rel="noopener noreferrer"
               className="contact__card"
             >
-              <i className="bx bxl-telegram contact__card-icon"></i>
+              <span className="contact__card-icon">
+                <i className="bx bxl-telegram"></i>
+              </span>
               <span className="contact__card-body">
                 <span className="contact__card-title">Telegram</span>
                 <span className="contact__card-data">@alikhanov13</span>
               </span>
-              <i className="bx bx-right-arrow-alt contact__card-arrow"></i>
             </a>
             <a
               href={site.social.instagram}
@@ -46,20 +48,22 @@ export default async function ContactSection() {
               rel="noopener noreferrer"
               className="contact__card"
             >
-              <i className="bx bxl-instagram contact__card-icon"></i>
+              <span className="contact__card-icon">
+                <i className="bx bxl-instagram"></i>
+              </span>
               <span className="contact__card-body">
                 <span className="contact__card-title">Instagram</span>
                 <span className="contact__card-data">alikhanov.13</span>
               </span>
-              <i className="bx bx-right-arrow-alt contact__card-arrow"></i>
             </a>
             <a href={`tel:${site.phone}`} className="contact__card">
-              <i className="bx bx-phone contact__card-icon"></i>
+              <span className="contact__card-icon">
+                <i className="bx bx-phone"></i>
+              </span>
               <span className="contact__card-body">
                 <span className="contact__card-title">Phone</span>
                 <span className="contact__card-data">{site.phone}</span>
               </span>
-              <i className="bx bx-right-arrow-alt contact__card-arrow"></i>
             </a>
           </div>
           <p className="contact__bot-note">
