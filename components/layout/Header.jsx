@@ -84,41 +84,50 @@ export default function Header() {
   };
 
   return (
-    <header className="header">
-      <nav className="nav container">
-        <a href={`/${locale}`} onClick={handleNavClick("home")} className="nav__logo">
+    <>
+      <div className="mobile-brand-bar">
+        <a href={`/${locale}`} onClick={handleNavClick("home")} className="mobile-brand-bar__logo">
           ALIKHANOV
         </a>
-
-        <div className={showMenu ? "nav__menu show-menu" : "nav__menu"}>
-          <ul className="nav__list">
-            {NAV_ITEMS.map((item) => (
-              <li className="nav__item" key={item.id}>
-                <a
-                  href={`/${locale}${SECTION_PATHS[item.id]}`}
-                  onClick={handleNavClick(item.id)}
-                  className={
-                    activeSection === item.id ? "nav__link active-link" : "nav__link"
-                  }
-                >
-                  <i className={`uil ${item.icon} nav__icon`}></i>
-                  {t(item.key)}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <i
-            className="uil uil-times nav__close"
-            onClick={() => setShowMenu(false)}
-          ></i>
-        </div>
-
         <LocaleSwitcher />
+      </div>
 
-        <div className="nav__toggle" onClick={() => setShowMenu((v) => !v)}>
-          <i className="uil uil-apps"></i>
-        </div>
-      </nav>
-    </header>
+      <header className="header">
+        <nav className="nav container">
+          <a href={`/${locale}`} onClick={handleNavClick("home")} className="nav__logo">
+            ALIKHANOV
+          </a>
+
+          <div className={showMenu ? "nav__menu show-menu" : "nav__menu"}>
+            <ul className="nav__list">
+              {NAV_ITEMS.map((item) => (
+                <li className="nav__item" key={item.id}>
+                  <a
+                    href={`/${locale}${SECTION_PATHS[item.id]}`}
+                    onClick={handleNavClick(item.id)}
+                    className={
+                      activeSection === item.id ? "nav__link active-link" : "nav__link"
+                    }
+                  >
+                    <i className={`uil ${item.icon} nav__icon`}></i>
+                    {t(item.key)}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <i
+              className="uil uil-times nav__close"
+              onClick={() => setShowMenu(false)}
+            ></i>
+          </div>
+
+          <LocaleSwitcher />
+
+          <div className="nav__toggle" onClick={() => setShowMenu((v) => !v)}>
+            <i className="uil uil-apps"></i>
+          </div>
+        </nav>
+      </header>
+    </>
   );
 }

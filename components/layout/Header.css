@@ -19,6 +19,18 @@
   color: var(--title-color);
   font-weight: 600;
 }
+
+/* Mobile-only top brand bar — the bottom bar becomes a pure tab-bar on
+   small screens, so the logo/locale switcher get their own always-visible
+   strip up top instead of being squeezed in next to the menu toggle. */
+.mobile-brand-bar {
+  display: none;
+}
+
+.mobile-brand-bar__logo {
+  color: var(--title-color);
+  font-weight: 600;
+}
 .nav__list {
   display: flex;
   column-gap: 2rem;
@@ -54,12 +66,35 @@
  For medium devices  */
 
 @media screen and (max-width: 768px) {
+  .mobile-brand-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    padding: 0 1.5rem;
+    background-color: var(--container-color);
+    box-shadow: 0 2px 12px rgb(0, 0, 0, 0.08);
+    z-index: var(--z-fixed);
+  }
+
   .header {
     top: initial;
     bottom: 0;
   }
   .nav {
     height: var(--header-height);
+    justify-content: flex-end;
+  }
+
+  /* Logo + locale switcher now live in .mobile-brand-bar up top; the
+     bottom bar keeps only the menu toggle (and the slide-up sheet). */
+  .nav > .nav__logo,
+  .nav > .locale-switcher {
+    display: none;
   }
   .nav__menu {
     width: 100%;
