@@ -28,6 +28,25 @@
   border-radius: 1.5rem;
   margin: auto;
   box-shadow: 0 30px 70px -20px rgb(0 0 0 / 45%);
+  scrollbar-width: thin;
+  scrollbar-color: rgb(0 0 0 / 20%) transparent;
+}
+
+.modal__content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal__content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal__content::-webkit-scrollbar-thumb {
+  background-color: rgb(0 0 0 / 20%);
+  border-radius: 999px;
+}
+
+.modal__content::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(0 0 0 / 32%);
 }
 
 .modal__close {
