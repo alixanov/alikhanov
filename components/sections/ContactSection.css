@@ -81,11 +81,12 @@
   border-radius: 1.1rem;
   text-align: left;
   min-width: 0;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 .contact__card:hover {
-  background-color: rgb(157 182 255 / 8%);
-  transform: translateY(-2px);
+  background-color: rgb(157 182 255 / 12%);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 26px -16px rgb(108 138 235 / 35%);
 }
 .contact__card-icon {
   display: inline-flex;
