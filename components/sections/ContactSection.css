@@ -61,7 +61,7 @@
 .contact__info {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.35rem;
+  gap: 0.75rem;
 }
 .contact__form {
   width: 100%;
@@ -75,56 +75,65 @@
 .contact__card {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
-  padding: 0.75rem;
-  margin: 0 -0.75rem;
-  border-radius: 1.1rem;
+  padding: 0.6rem 0;
   text-align: left;
   min-width: 0;
-}
-.contact__card-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  background-color: var(--accent-tint);
-  color: var(--accent-color-dark);
-  font-size: 1.1rem;
-  box-shadow: 0 0 0 1px transparent;
-  transition: box-shadow 0.25s;
-}
-.contact__card:hover .contact__card-icon {
-  box-shadow: 0 0 0 1px var(--accent-color-dark);
 }
 .contact__card-body {
   display: flex;
   flex-direction: column;
   min-width: 0;
   flex: 1;
+  gap: 0.15rem;
 }
 .contact__card-title {
   font-size: var(--smaller-font-size);
   color: var(--text-color);
 }
 .contact__card-data {
+  position: relative;
   display: inline-block;
   width: fit-content;
   max-width: 100%;
-  font-size: var(--small-font-size);
-  font-weight: var(--font-medium);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
   color: var(--title-color);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-bottom: 1px solid transparent;
-  transition: color 0.25s, border-color 0.25s;
+  transition: color 0.3s;
+}
+.contact__card-data::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.1rem;
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--accent-color-dark);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
 }
 .contact__card:hover .contact__card-data {
   color: var(--accent-color-dark);
-  border-bottom-color: var(--accent-color-dark);
+}
+.contact__card:hover .contact__card-data::after {
+  transform: scaleX(1);
+}
+.contact__card-arrow {
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  color: var(--accent-color-dark);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.contact__card:hover .contact__card-arrow {
+  opacity: 1;
+  transform: translateX(0);
 }
 .contact__bot-note {
   display: flex;
