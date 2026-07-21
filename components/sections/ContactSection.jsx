@@ -8,6 +8,9 @@ export default async function ContactSection() {
 
   return (
     <section className="contact section" id="contact">
+      <div className="contact__bg-blob contact__bg-blob--1"></div>
+      <div className="contact__bg-blob contact__bg-blob--2"></div>
+
       <h2 className="section__title" data-aos="zoom-in">
         {t("title")}
       </h2>
