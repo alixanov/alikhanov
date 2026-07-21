@@ -81,12 +81,6 @@
   border-radius: 1.1rem;
   text-align: left;
   min-width: 0;
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-}
-.contact__card:hover {
-  background-color: rgb(157 182 255 / 12%);
-  transform: translateY(-3px);
-  box-shadow: 0 14px 26px -16px rgb(108 138 235 / 35%);
 }
 .contact__card-icon {
   display: inline-flex;
@@ -99,10 +93,11 @@
   background-color: var(--accent-tint);
   color: var(--accent-color-dark);
   font-size: 1.1rem;
-  transition: background-color 0.3s;
+  box-shadow: 0 0 0 1px transparent;
+  transition: box-shadow 0.25s;
 }
 .contact__card:hover .contact__card-icon {
-  background-color: rgb(157 182 255 / 55%);
+  box-shadow: 0 0 0 1px var(--accent-color-dark);
 }
 .contact__card-body {
   display: flex;
@@ -115,17 +110,21 @@
   color: var(--text-color);
 }
 .contact__card-data {
-  display: block;
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
   color: var(--title-color);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: color 0.2s;
+  border-bottom: 1px solid transparent;
+  transition: color 0.25s, border-color 0.25s;
 }
 .contact__card:hover .contact__card-data {
   color: var(--accent-color-dark);
+  border-bottom-color: var(--accent-color-dark);
 }
 .contact__bot-note {
   display: flex;
