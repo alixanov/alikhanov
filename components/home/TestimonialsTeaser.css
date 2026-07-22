@@ -50,7 +50,7 @@
   position: absolute;
   top: 0.5rem;
   right: 1.25rem;
-  font-size: 3.5rem;
+  font-size: var(--big-font-size);
   font-family: Georgia, serif;
   color: var(--accent-color);
   opacity: 0.6;

@@ -141,7 +141,7 @@
   height: 1.75rem;
   border-radius: 50%;
   background-color: var(--accent-color-dark);
-  color: #fff;
+  color: var(--container-color);
   font-size: var(--smaller-font-size);
   font-weight: var(--font-semi-bold);
   flex-shrink: 0;

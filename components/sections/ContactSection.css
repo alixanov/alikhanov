@@ -41,7 +41,7 @@
 }
 
 .contact .section__subtitle {
-  margin-bottom: 2.5rem;
+  margin-bottom: var(--mb-2-5);
 }
 
 .contact__panel {
@@ -124,7 +124,7 @@
 }
 .contact__card-arrow {
   flex-shrink: 0;
-  font-size: 1.25rem;
+  font-size: var(--h3-font-size);
   color: var(--accent-color-dark);
   opacity: 0;
   transform: translateX(-6px);
@@ -185,10 +185,10 @@
   font-size: var(--small-font-size);
 }
 .contact__form-status--success {
-  color: #2f8a4a;
+  color: var(--success-color);
 }
 .contact__form-status--error {
-  color: #c0392b;
+  color: var(--error-color);
 }
 
 /*=============== BREAKPOINTS ===============*/

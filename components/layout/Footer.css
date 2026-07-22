@@ -10,6 +10,7 @@
   color: var(--title-color);
 }
 .footer__title {
+  font-size: var(--h1-font-size);
   text-align: center;
   margin-bottom: var(--mb-2);
 }
@@ -74,6 +75,6 @@
   .footer__social-link {
     padding: 0.25rem;
     border-radius: 0.25rem;
-    font-size: 1rem;
+    font-size: var(--normal-font-size);
   }
 }

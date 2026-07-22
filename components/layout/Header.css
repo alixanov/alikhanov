@@ -17,7 +17,7 @@
 .nav__logo,
 .nav__toggle {
   color: var(--title-color);
-  font-weight: 600;
+  font-weight: var(--font-semi-bold);
 }
 
 /* Mobile-only top brand bar — the bottom bar becomes a pure tab-bar on
@@ -29,7 +29,7 @@
 
 .mobile-brand-bar__logo {
   color: var(--title-color);
-  font-weight: 600;
+  font-weight: var(--font-semi-bold);
 }
 .nav__list {
   display: flex;
@@ -42,7 +42,7 @@
   font-size: var(--small-font-size);
   color: var(--title-color);
   transition: 0.3s;
-  font-weight: 600;
+  font-weight: var(--font-semi-bold);
 }
 
 .nav__icon,
@@ -55,7 +55,7 @@
 
 .active-link,
 .nav__link:hover {
-  color: rgb(157, 182, 255);
+  color: var(--accent-color-dark);
 }
 /* Change background header  */
 .scroll-header {
@@ -120,13 +120,13 @@
   }
 
   .nav__icon {
-    font-size: 1.2rem;
+    font-size: var(--h3-font-size);
   }
   .nav__close {
     position: absolute;
     right: 1.3rem;
     bottom: 0.5rem;
-    font-size: 1.5rem;
+    font-size: var(--h2-font-size);
     cursor: pointer;
     color: var(--title-color);
   }
@@ -138,7 +138,7 @@
     cursor: pointer;
   }
   .nav__item > a {
-    font-weight: bold;
+    font-weight: var(--font-semi-bold);
   }
 
   .nav__icon,

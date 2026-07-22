@@ -10,7 +10,7 @@
   transition: 0.4s;
 }
 .scrollup__icon {
-  font-size: 1.5rem;
+  font-size: var(--h2-font-size);
   color: var(--container-color);
 }
 .scrollup:hover {
@@ -30,7 +30,7 @@
     padding: 0.25rem 0.4rem;
   }
   .scrollup__icon {
-    font-size: 1.25rem;
+    font-size: var(--h3-font-size);
   }
 }
 

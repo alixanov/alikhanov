@@ -16,6 +16,8 @@
   --accent-color: rgb(157, 182, 255);
   --accent-color-dark: rgb(108, 138, 235);
   --accent-tint: rgb(234, 238, 255);
+  --success-color: #2f8a4a;
+  --error-color: #c0392b;
 
   /*========== Font and typography ==========*/
   --body-font: "Nunito", sans-serif;
@@ -183,7 +185,7 @@ img {
 }
 
 .icon-badge i {
-  font-size: 1.25rem;
+  font-size: var(--h3-font-size);
   color: var(--accent-color-dark);
   line-height: 1;
 }

@@ -79,7 +79,7 @@
 }
 
 .hero__social-icon {
-  font-size: 1.2rem;
+  font-size: var(--h3-font-size);
   color: var(--title-color);
 }
 
@@ -146,7 +146,7 @@
 
 .hero__btn--primary {
   background-color: var(--title-color);
-  color: #fff;
+  color: var(--container-color);
 }
 
 .hero__btn--primary:hover {
@@ -162,7 +162,7 @@
 
 .hero__btn--outline:hover {
   background-color: var(--title-color);
-  color: #fff;
+  color: var(--container-color);
   transform: translateY(-2px);
 }
 
@@ -186,7 +186,7 @@
 
 .hero__facts i {
   color: var(--accent-color-dark);
-  font-size: 1rem;
+  font-size: var(--normal-font-size);
   flex-shrink: 0;
 }
 
@@ -204,7 +204,7 @@
   display: flex;
   align-items: center;
   gap: 0.85rem;
-  margin-bottom: 1rem;
+  margin-bottom: var(--mb-1);
   padding-bottom: 1rem;
   border-bottom: 1px solid rgb(0 0 0 / 8%);
 }
@@ -260,17 +260,18 @@
   justify-content: center;
   gap: 0.5rem;
   background-color: var(--title-color);
-  color: #fff;
+  color: var(--container-color);
   padding: 0.9rem 1.5rem;
-  border-radius: 0.75rem;
+  border-radius: 0.85rem;
   font-weight: var(--font-medium);
   margin-top: 0.25rem;
-  transition: background-color 0.2s, transform 0.2s;
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .hero-card__submit:hover {
   background-color: var(--accent-color-dark);
   transform: translateY(-2px);
+  box-shadow: 0 10px 20px -8px rgb(0 0 0 / 25%);
 }
 
 .hero-card__submit:disabled {
@@ -284,11 +285,11 @@
 }
 
 .hero-card__status--success {
-  color: #2f8a4a;
+  color: var(--success-color);
 }
 
 .hero-card__status--error {
-  color: #c0392b;
+  color: var(--error-color);
 }
 
 .hero__scroll {
@@ -304,7 +305,7 @@
 }
 
 .hero__scroll-icon {
-  font-size: 1.25rem;
+  font-size: var(--h3-font-size);
   animation: hero-scroll-bounce 2s ease-in-out infinite;
 }
 
