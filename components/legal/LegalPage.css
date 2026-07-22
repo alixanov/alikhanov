@@ -2,10 +2,6 @@
   padding-top: 3rem;
 }
 
-.legal__container {
-  max-width: 720px;
-}
-
 .legal__title {
   font-size: var(--h1-font-size);
   color: var(--title-color);

@@ -74,6 +74,17 @@ export default function Header() {
     event.preventDefault();
     setShowMenu(false);
 
+    // Real subpages (e.g. /privacy, /terms) don't have the homepage's
+    // scroll-anchor sections in the DOM. A client-side router.push leaves
+    // Header mounted (it lives in the shared layout) so its own "scroll to
+    // section on load" effect never re-fires — a full navigation reliably
+    // lands on the right section instead.
+    const onSinglePage = !!document.getElementById("home");
+    if (!onSinglePage) {
+      window.location.href = `/${locale}${SECTION_PATHS[id] ?? ""}`;
+      return;
+    }
+
     if (id === "home") {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
