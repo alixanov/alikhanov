@@ -1,6 +1,5 @@
 .cta-banner {
-  padding: 4rem 0 5rem;
-  margin: 2rem 0;
+  padding: 3rem 0;
   background: linear-gradient(180deg, var(--accent-tint) 0%, transparent 100%);
 }
 

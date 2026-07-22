@@ -134,7 +134,7 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
-  padding: 6rem 0 2rem;
+  padding: 2.5rem 0 2rem;
   scroll-margin-top: var(--header-height);
 }
 
