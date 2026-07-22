@@ -26,9 +26,10 @@ export default function ServicesSection() {
       </span>
 
       <div className="container services__grid">
-        {services.map((service) => (
+        {services.map((service, index) => (
           <div className="service-card" key={service.slug} data-aos="fade-up">
-            <div>
+            <span className="service-card__number">{String(index + 1).padStart(2, "0")}</span>
+            <div className="service-card__body">
               <span className="icon-badge service-card__icon">
                 <i className={`uil ${service.icon}`}></i>
               </span>
