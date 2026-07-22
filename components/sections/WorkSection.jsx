@@ -45,10 +45,10 @@ export default function WorkSection() {
         centeredSlides
         loop
         mousewheel={{ forceToAxis: true, sensitivity: 1 }}
-        coverflowEffect={{ rotate: 0, stretch: 0, depth: 100, modifier: 3, slideShadows: true }}
+        coverflowEffect={{ rotate: 0, stretch: -20, depth: 80, modifier: 1.5, slideShadows: false }}
         breakpoints={{
-          0: { slidesPerView: 1 },
-          700: { slidesPerView: 2 },
+          0: { slidesPerView: 1.15, spaceBetween: 16 },
+          700: { slidesPerView: 1.6, spaceBetween: 24 },
         }}
       >
         {loopSlides.map((item, index) => (
