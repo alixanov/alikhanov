@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { site } from "@/content/site";
+import { Link } from "@/i18n/navigation";
 import ScrollLink from "@/components/ui/ScrollLink";
 import "./Footer.css";
 
@@ -59,6 +60,15 @@ export default async function Footer() {
           >
             <i className="bx bxl-github"></i>
           </a>
+        </div>
+
+        <div className="footer__legal">
+          <Link href="/privacy" className="footer__legal-link">
+            {tFooter("privacy")}
+          </Link>
+          <Link href="/terms" className="footer__legal-link">
+            {tFooter("terms")}
+          </Link>
         </div>
 
         <span className="footer__copy">

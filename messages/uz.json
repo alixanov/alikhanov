@@ -20,7 +20,10 @@
   "footer": {
     "rights": "Barcha huquqlar himoyalangan.",
     "quickLinks": "Navigatsiya",
-    "contactUs": "Bog'lanish"
+    "contactUs": "Bog'lanish",
+    "privacy": "Maxfiylik siyosati",
+    "terms": "Foydalanish qoidalari",
+    "updated": "Yangilangan:"
   },
   "home": {
     "heroKicker": "Veb-dasturlash va biznesni avtomatlashtirish",

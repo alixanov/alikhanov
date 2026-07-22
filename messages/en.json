@@ -20,7 +20,10 @@
   "footer": {
     "rights": "All rights reserved.",
     "quickLinks": "Quick links",
-    "contactUs": "Get in touch"
+    "contactUs": "Get in touch",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "updated": "Updated:"
   },
   "home": {
     "heroKicker": "Web development & business automation",

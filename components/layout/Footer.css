@@ -42,9 +42,28 @@
   background-color: var(--accent-color-dark);
   transform: translateY(-3px);
 }
+.footer__legal {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 1.25rem;
+  row-gap: 0.4rem;
+  margin-top: 4.5rem;
+}
+
+.footer__legal-link {
+  color: var(--text-color);
+  font-size: var(--smaller-font-size);
+  transition: color 0.2s;
+}
+
+.footer__legal-link:hover {
+  color: var(--accent-color-dark);
+}
+
 .footer__copy {
   display: block;
-  margin-top: 4.5rem;
+  margin-top: 0.85rem;
   color: var(--title-color);
   text-align: center;
   font-size: var(--smaller-font-size);
