@@ -21,46 +21,40 @@ export default async function ContactSection() {
       <div className="contact__panel container">
         <div className="contact__panel-col">
           <h3 className="contact__title">{t("directTitle")}</h3>
-          <div className="contact__info">
-            <a href={`mailto:${site.email}`} className="contact__card">
-              <span className="contact__card-body">
-                <span className="contact__card-title">Email</span>
-                <span className="contact__card-data">{site.email}</span>
-              </span>
-              <i className="bx bx-right-arrow-alt contact__card-arrow"></i>
-            </a>
+
+          <a href={`mailto:${site.email}`} className="contact__primary">
+            <span className="contact__primary-label">Email</span>
+            <span className="contact__primary-value">
+              <span className="contact__primary-text">{site.email}</span>
+              <i className="bx bx-right-arrow-alt"></i>
+            </span>
+          </a>
+
+          <div className="contact__secondary">
             <a
               href={site.social.telegram}
               target="_blank"
               rel="noopener noreferrer"
-              className="contact__card"
+              className="contact__secondary-item"
             >
-              <span className="contact__card-body">
-                <span className="contact__card-title">Telegram</span>
-                <span className="contact__card-data">@alikhanov13</span>
-              </span>
-              <i className="bx bx-right-arrow-alt contact__card-arrow"></i>
+              <span className="contact__secondary-label">Telegram</span>
+              <span className="contact__secondary-value">@alikhanov13</span>
             </a>
             <a
               href={site.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="contact__card"
+              className="contact__secondary-item"
             >
-              <span className="contact__card-body">
-                <span className="contact__card-title">Instagram</span>
-                <span className="contact__card-data">alikhanov.13</span>
-              </span>
-              <i className="bx bx-right-arrow-alt contact__card-arrow"></i>
+              <span className="contact__secondary-label">Instagram</span>
+              <span className="contact__secondary-value">alikhanov.13</span>
             </a>
-            <a href={`tel:${site.phone}`} className="contact__card">
-              <span className="contact__card-body">
-                <span className="contact__card-title">Phone</span>
-                <span className="contact__card-data">{site.phone}</span>
-              </span>
-              <i className="bx bx-right-arrow-alt contact__card-arrow"></i>
+            <a href={`tel:${site.phone}`} className="contact__secondary-item">
+              <span className="contact__secondary-label">Phone</span>
+              <span className="contact__secondary-value">{site.phone}</span>
             </a>
           </div>
+
           <p className="contact__bot-note">
             <i className="uil uil-robot"></i> {t("poweredByBot")}
           </p>
