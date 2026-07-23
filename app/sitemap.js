@@ -1,8 +1,9 @@
 import { routing } from "@/i18n/routing";
+import { getCaseStudySlugs } from "@/content/case-studies";
 
 const BASE_URL = "https://www.alikhanov.uz";
 
-const PATHS = ["", "/privacy", "/terms"];
+const PATHS = ["", "/privacy", "/terms", ...getCaseStudySlugs().map((slug) => `/work/${slug}`)];
 
 export default function sitemap() {
   return PATHS.flatMap((path) =>

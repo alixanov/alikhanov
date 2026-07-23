@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { EffectCoverflow, Mousewheel } from "swiper/modules";
+import { Link } from "@/i18n/navigation";
 import { caseStudies } from "@/content/case-studies";
 
 // Swiper's loop mode needs enough real slides to stay reliable with
@@ -120,6 +121,9 @@ export default function WorkSection() {
                   <i className="uil uil-external-link-alt button__icon"></i>
                 </a>
               )}
+              <Link href={`/work/${activeCase.slug}`} className="button button--outline">
+                {tCommon("learnMore")}
+              </Link>
             </div>
           </>
         )}
