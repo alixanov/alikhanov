@@ -2,10 +2,6 @@
   padding-top: 2.5rem;
 }
 
-.case-study__container {
-  max-width: 720px;
-}
-
 .case-study__back {
   display: inline-flex;
   align-items: center;
