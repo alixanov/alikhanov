@@ -90,7 +90,11 @@ export default function ContactForm() {
 
       <button className="button button--flex" type="submit" disabled={status === "submitting"}>
         {status === "submitting" ? t("submitting") : t("submit")}
-        <i className="uil uil-message button__icon"></i>
+        {status === "submitting" ? (
+          <i className="bx bx-loader-alt bx-spin button__icon"></i>
+        ) : (
+          <i className="uil uil-message button__icon"></i>
+        )}
       </button>
 
       {status === "success" && <p className="contact__form-status contact__form-status--success">{t("success")}</p>}
