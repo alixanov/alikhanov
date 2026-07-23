@@ -43,6 +43,7 @@
     "heroCardContact": "Telegram yoki telefon",
     "heroCardSubmit": "Ariza yuborish",
     "heroCardSubmitting": "Yuborilmoqda...",
+    "heroCardSent": "Yuborildi",
     "heroCardSuccess": "Ariza yuborildi! Tez orada javob beraman.",
     "heroCardError": "Yuborib bo'lmadi. Telegram orqali to'g'ridan-to'g'ri yozing.",
     "heroCardAutoMessage": "Bosh sahifadan tezkor ariza (hero-forma)",

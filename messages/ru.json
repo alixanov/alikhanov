@@ -43,6 +43,7 @@
     "heroCardContact": "Telegram или телефон",
     "heroCardSubmit": "Отправить заявку",
     "heroCardSubmitting": "Отправка...",
+    "heroCardSent": "Отправлено",
     "heroCardSuccess": "Заявка отправлена! Скоро отвечу.",
     "heroCardError": "Не получилось. Напишите в Telegram напрямую.",
     "heroCardAutoMessage": "Быстрая заявка с главного экрана (hero-форма)",

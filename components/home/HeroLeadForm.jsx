@@ -71,9 +71,15 @@ export default function HeroLeadForm() {
         className="hero-card__input"
       />
       <button type="submit" className="hero-card__submit" disabled={status === "submitting"}>
-        {status === "submitting" ? t("heroCardSubmitting") : t("heroCardSubmit")}
+        {status === "submitting"
+          ? t("heroCardSubmitting")
+          : status === "success"
+            ? t("heroCardSent")
+            : t("heroCardSubmit")}
         {status === "submitting" ? (
           <i className="bx bx-loader-alt bx-spin"></i>
+        ) : status === "success" ? (
+          <i className="bx bx-check"></i>
         ) : (
           <i className="uil uil-arrow-right"></i>
         )}

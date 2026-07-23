@@ -43,6 +43,7 @@
     "heroCardContact": "Telegram or phone",
     "heroCardSubmit": "Send request",
     "heroCardSubmitting": "Sending...",
+    "heroCardSent": "Sent",
     "heroCardSuccess": "Request sent! I'll reply soon.",
     "heroCardError": "Couldn't send it. Please message me on Telegram directly.",
     "heroCardAutoMessage": "Quick request from the homepage (hero form)",
