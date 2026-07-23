@@ -16,3 +16,9 @@
 .cta-banner__subtitle {
   margin-bottom: var(--mb-2);
 }
+
+@media screen and (max-width: 768px) {
+  .cta-banner {
+    padding: 2rem 0;
+  }
+}
